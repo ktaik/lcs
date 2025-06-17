@@ -28,6 +28,7 @@ export default function Home() {
         setResult('エラー: レスポンスが不正です');
       }
     } catch (error) {
+      console.error(error);
       setResult('通信エラーが発生しました');
     }
 
