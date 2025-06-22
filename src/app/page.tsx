@@ -61,11 +61,11 @@ export default function Home() {
         </label>
       </div>
       <button onClick={handleCalculate} disabled={loading}>
-        {loading ? '計算中...' : '最長共通部分列を計算'}
+        {loading ? '計算中...' : '計算'}
       </button>
       {result !== null && (
         <div style={{ marginTop: 24 }}>
-          <strong>結果:</strong>
+          <strong>結果:  ※()内は1つの例</strong>
           <div style={{ marginTop: 8, wordBreak: 'break-all' }}>{`${result.length} (最長共通部分列: "${result}") `}</div>
         </div>
       )}
