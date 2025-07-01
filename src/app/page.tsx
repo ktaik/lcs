@@ -36,37 +36,37 @@ export default function Home() {
   };
 
   return (
-    <div style={{ maxWidth: 500, margin: '2rem auto', padding: 24, border: '1px solid #ccc', borderRadius: 8 }}>
-      <h1>最長共通部分列計算ツール</h1>
-      <div style={{ marginBottom: 16 }}>
-        <label>
+    <div className="lcs-container">
+      <h1 className="lcs-title">最長共通部分列計算ツール</h1>
+      <div className="lcs-field">
+        <label className="lcs-label">
           文字列1:
           <input
             type="text"
             value={str1}
             onChange={e => setStr1(e.target.value)}
-            style={{ width: '100%', marginTop: 4 }}
+            className="lcs-input"
           />
         </label>
       </div>
-      <div style={{ marginBottom: 16 }}>
-        <label>
+      <div className="lcs-field">
+        <label className="lcs-label">
           文字列2:
           <input
             type="text"
             value={str2}
             onChange={e => setStr2(e.target.value)}
-            style={{ width: '100%', marginTop: 4 }}
+            className="lcs-input"
           />
         </label>
       </div>
-      <button onClick={handleCalculate} disabled={loading}>
+      <button className="lcs-btn" onClick={handleCalculate} disabled={loading}>
         {loading ? '計算中...' : '計算'}
       </button>
       {result !== null && (
-        <div style={{ marginTop: 24 }}>
+        <div className="lcs-result">
           <strong>結果:  ※()内は1つの例</strong>
-          <div style={{ marginTop: 8, wordBreak: 'break-all' }}>{`${result.length} (最長共通部分列: "${result}") `}</div>
+          <div className="lcs-result-string">{`${result.length} (最長共通部分列: "${result}") `}</div>
         </div>
       )}
     </div>
